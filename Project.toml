@@ -1,0 +1,12 @@
+name = "SymbolicErrorPropagator"
+uuid = "086cc5bb-2461-57d8-8068-0aed7f5b5cd1"
+version = "0.1.0"
+authors = ["Hannah Boinowitz <pymailer@web.de>"]
+
+[deps]
+SymPy = "24249f21-da20-56a4-8eb1-6a02cf4ae2e6"
+
+[compat]
+SymPy = "1.1.4"
+julia = "1.7"
+
