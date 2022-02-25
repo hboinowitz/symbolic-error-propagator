@@ -1,6 +1,6 @@
 using SymPy
 
-function get_propagated_error_string(f::Sym, error_variables::Vector{Sym}, method::String, 
+function get_propagated_error_string(f::Sym, error_variables::Vector{Sym}, method::String; 
                                      execute_derivative::Bool = true)
 
     if !(method in ["lin", "gaussian"]) 
@@ -40,7 +40,7 @@ function get_propagated_error_string(f::Sym, error_variables::Vector{Sym}, metho
 end
 
 function get_propagated_error_function(f::Sym, error_variables::Vector{Sym}, 
-                                      errors::Vector{Sym}, method::String, execute_derivative::Bool = true)
+                                      errors::Vector{Sym}, method::String; execute_derivative::Bool = true)
     
     if !(method in ["lin", "gaussian"]) 
         throw(ArgumentError("Error Propagation Method must be one of `lin` or `gaussian`."))
